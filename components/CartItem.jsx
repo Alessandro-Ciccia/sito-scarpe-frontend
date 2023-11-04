@@ -52,7 +52,6 @@ const CartItem = ({ data }) => {
             <div className="flex items-center gap-1">
               <div className="font-semibold">Taglia:</div>
               <select
-                defaultValue={0}
                 className="hover:text-black"
                 onChange={(e) => updateCartItem(e, "selectedSize")}
               >
