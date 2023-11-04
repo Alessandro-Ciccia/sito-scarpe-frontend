@@ -1,0 +1,114 @@
+import Link from "next/link";
+import React from "react";
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import Wrapper from "./Wrapper";
+
+const Footer = () => {
+  return (
+    <footer className="bg-black text-white pt-14 pb-3">
+      <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0">
+        <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
+          <div className="flex flex-col gap-3 shrink-0">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+              Trova uno store
+            </div>
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+              diventa partner
+            </div>
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+              iscriviti alla newsletter
+            </div>
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+              mandaci un feedback
+            </div>
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+              sconto studenti
+            </div>
+          </div>
+
+          <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
+            <div className="flex flex-col gap-3">
+              <div className="font-oswald font-medium uppercase text-sm">
+                centro assistenza
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Stato dell'ordine
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Consegna
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Rimborsi
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Opzioni di pagamento
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Contattaci
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <div className="font-oswald font-medium uppercase text-sm">
+                About nike
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                News
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Lavora con noi
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Investori
+              </div>
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                Solstenibilità
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-4 justify-center md:justify-start">
+          <div
+            onClick={() => window.open("https://facebook.com", "_blank")}
+            className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+          >
+            <FaFacebookF size={20} />
+          </div>
+          <Link
+            href="https://twitter.com"
+            className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+          >
+            <FaTwitter size={20} />
+          </Link>
+          <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+            <FaYoutube size={20} />
+          </div>
+          <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+            <FaInstagram size={20} />
+          </div>
+        </div>
+      </Wrapper>
+      <Wrapper className="flex justify-between mt-10 flex-col md:flex-row gap-[10px] md:gap-0">
+        <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:text-left">
+          © 2023 Nike, Inc. All Rights Reserved
+        </div>
+        <div className="flex gap-2 md:gap-5 text-center md:text-left flex-wrap justify-center">
+          <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+            Guides
+          </div>
+          <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+            Terms of Sale
+          </div>
+          <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+            Terms of Use
+          </div>
+          <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+            Privacy Policy
+          </div>
+        </div>
+      </Wrapper>
+    </footer>
+  );
+};
+
+export default Footer;
