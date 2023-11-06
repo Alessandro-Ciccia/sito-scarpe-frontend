@@ -73,7 +73,7 @@ const Category = ({ category, products, slug }) => {
 
 export default Category;
 
-import { STRAPI_API_TOKEN } from "./urls";
+import { STRAPI_API_TOKEN } from "../../utils/urls";
 
 export async function getStaticPaths() {
   // const category = await fetchDataFromApi("/api/categories?populate=*");
