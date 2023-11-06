@@ -73,9 +73,9 @@ const Category = ({ category, products, slug }) => {
 
 export default Category;
 
-import { STRAPI_API_TOKEN } from "../../utils/urls";
+import { API_URL, STRAPI_API_TOKEN } from "../../utils/urls";
 
-export async function getStaticPaths() {
+export async function getStaticPaths(endpoint) {
   // const category = await fetchDataFromApi("/api/categories?populate=*");
   const options = {
     method: "GET",
@@ -84,8 +84,12 @@ export async function getStaticPaths() {
     },
   };
 
-  const catRes = await fetch("http://127.0.0.1:1337/api/categories?populate=*");
+  const catRes = await fetch(
+    `http://127.0.0.1:1337/api/categories?populate=*`,
+    options
+  );
   const category = await catRes.json();
+  // console.log(category?.data?.[0].attributes.slug);
 
   const paths = category?.data?.map((c) => ({
     params: {
@@ -98,6 +102,20 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+// export async function getStaticPaths() {
+//   const category = await fetchDataFromApi("/api/categories?populate=*");
+//   const paths = category?.data?.map((c) => ({
+//     params: {
+//       slug: c.attributes.slug,
+//     },
+//   }));
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
 export async function getStaticProps({ params: { slug } }) {
   const category = await fetchDataFromApi(
