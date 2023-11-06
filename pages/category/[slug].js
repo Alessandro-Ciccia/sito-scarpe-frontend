@@ -75,7 +75,7 @@ export default Category;
 
 import { API_URL, STRAPI_API_TOKEN } from "../../utils/urls";
 
-export async function getStaticPaths(endpoint) {
+export async function getStaticPaths() {
   // const category = await fetchDataFromApi("/api/categories?populate=*");
   const options = {
     method: "GET",
