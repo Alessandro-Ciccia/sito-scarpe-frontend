@@ -85,7 +85,7 @@ export async function getStaticPaths() {
   };
 
   const catRes = await fetch(
-    `http://127.0.0.1:1337/api/categories?populate=*`,
+    `https://sito-scarpe.onrender.com/api/categories?populate=*`,
     options
   );
   const category = await catRes.json();
